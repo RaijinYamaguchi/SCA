@@ -1,0 +1,21 @@
+*{
+    color: rgb(0, 94, 255);
+}
+ul{
+    display: flex;
+    padding: 1cm;
+    justify-content: space-between;
+    align-items: center;
+    
+    flex: content;
+    background-color: aquamarine;
+    
+}
+a{
+    text-decoration: none;
+}
+.titles{
+    text-decoration: solid;
+    font-style: bold;
+    color: rgb(17, 0, 255);
+}
