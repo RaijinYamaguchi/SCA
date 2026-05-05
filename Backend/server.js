@@ -3,6 +3,8 @@ const cors = require('cors');
 require('dotenv').config();
 const usuarioController = require('./controller/usuarioController');
 const deviceController = require('./controller/deviceContoller');
+const authRoutes = require('./routes/authRoutes');
+const meterRoutes = require('./routes/meterRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,6 +12,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Rutas de autenticación
+app.use('/auth', authRoutes);
+
+// Rutas de medidores
+app.use('/meters', meterRoutes);
 
 // Rutas para usuários
 app.get('/usuarios', usuarioController.getAllUsuarios);
